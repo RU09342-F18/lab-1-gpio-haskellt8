@@ -5,4 +5,4 @@ This program was used to program the microprocessor in order to be used on a bre
 * MSP430G2553
 
 ## Specifications
-The program from from [Multiple Blink](../Multiple\ Blink)
+The program Multiple Blink was reused for this.  The MSP430G2553 IC was removed and put on a bread board.  The circuitry from the microcontroller was simulated on the breadboard.  The power was taken from the micro controller to power the processor.  This is seen in the GIF.
