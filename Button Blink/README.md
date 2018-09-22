@@ -1,18 +1,9 @@
 # Button Blink
-Now that you have looked at blinking the LED from some built in delay, but what if we wanted to control the state of the LED by a button? You may think "Why would I need a Microcontroller to perform the job of a switch?". And that is where you come in. The bare minimum for this part of the lab is to essentially replicate a switch with your development board.
+This program was interfaced with the microcontroller, to make a LED flash when a button is pressed, and a different LED flash when the button is released.
 
-# YOU NEED TO CREATE THE FOLLOWING FOLDERS
+## Supported Microprocessors
 * MSP430G2553
-* MSP(FILL IN THE PROCESSOR YOU ARE USING)
+* MSP430F5529
 
-## README
-Remember to replace this README with your README once you are ready to submit. I would recommend either making a copy of this file or taking a screen shot. There might be a copy of all of these README's in a folder on the top level depending on the exercise. Make sure you talk about how your button is configured (momentary or continuous. Normally open or closed. Does the button press indicate when the LED should be on or off.)
-
-## Extra Work
-What can we do to make this a little bit more worthy of needing a microcontroller.
-
-### Button Based Speed Control
-Much like the UART controlled speed, what if you could cycle between speeds based on a button press? The speed could progress through a cycle of "Off-Slow-Medium-Fast" looping back when you hit the end.
-
-### Color Change
-What if upon a button press, the LED which was blinking changed. Some of the development boards contain two LEDs, so you could swap between a Red and a Green LED.
+## Specifications
+The processor has a 32kHz clock cycle.  The define macro defines 'TENTHS' as 3200.  This was done in oreder to be used to the LED to flash at multiples of 0.1 seconds.  Rather than putting in a single empty for loop to delay, I used 2 for loops one for each LED.  The for loops are in if else checks for the button pressed.  This way, it is easy to change the flash rate for either LED, without changing both of the rates.
